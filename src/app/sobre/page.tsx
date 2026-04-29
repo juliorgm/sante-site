@@ -46,7 +46,7 @@ export default function SobrePage() {
           <div className="relative rounded-3xl overflow-hidden aspect-square shadow-xl">
             {/* TROQUE: /public/images/clinica-fachada.jpg */}
             <Image
-              src="/images/clinica.jpg"
+              src="/images/clinica de fisioteriapia em belém-2.png"
               alt="Clínica Santé em Belém"
               fill
               className="object-cover"

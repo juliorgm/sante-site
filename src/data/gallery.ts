@@ -19,7 +19,7 @@ export const GALERIA: FotoGaleria[] = [
   // ── RECEPÇÃO ──────────────────────────────────────────────────
   {
     id:        'recepcao-1',
-    src:       '/images/galeria/recepcao-1.jpg',
+    src:       '/images/hero.jpg',
     alt:       'Recepção da clínica Santé — ambiente acolhedor',
     categoria: 'recepcao',
   },
@@ -28,13 +28,13 @@ export const GALERIA: FotoGaleria[] = [
   // ── CONSULTÓRIOS ──────────────────────────────────────────────
   {
     id:        'consultorio-1',
-    src:       '/images/galeria/consultorio-1.jpg',
+    src:       '/images/galeria/recepcao-1.jpg',
     alt:       'Consultório 1 — fisioterapia ortopédica',
     categoria: 'consultorio',
   },
   {
     id:        'consultorio-2',
-    src:       '/images/galeria/consultorio-2.jpg',
+    src:       '/images/galeria/recepcao-1.jpg',
     alt:       'Consultório 2 — terapia manual',
     categoria: 'consultorio',
   },
@@ -43,7 +43,7 @@ export const GALERIA: FotoGaleria[] = [
   // ── STUDIO DE PILATES ─────────────────────────────────────────
   {
     id:        'studio-1',
-    src:       '/images/galeria/studio-1.jpg',
+    src:        '/images/galeria/recepcao-1.jpg',
     alt:       'Studio de Pilates — aparelhos Reformer',
     categoria: 'studio',
   },
@@ -52,7 +52,7 @@ export const GALERIA: FotoGaleria[] = [
   // ── EQUIPE ────────────────────────────────────────────────────
   {
     id:        'equipe-1',
-    src:       '/images/galeria/equipe-1.jpg',
+    src:       '/images/galeria/recepcao-1.jpg',
     alt:       'Equipe de fisioterapeutas da Santé',
     categoria: 'equipe',
   },
