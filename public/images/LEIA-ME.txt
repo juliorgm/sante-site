@@ -1,0 +1,34 @@
+======================================================
+📸  PASTA DE IMAGENS — COMO ORGANIZAR
+======================================================
+
+Coloque as imagens nesta pasta (/public/images/) seguindo
+a estrutura abaixo. Os nomes dos arquivos importam!
+
+/public/images/
+│
+├── logo.png            ← Logo colorida (usada no header)
+├── logo-branca.png     ← Logo em branco (usada no footer)
+├── hero.jpg            ← Foto principal da home (600x750px recomendado)
+├── clinica.jpg         ← Foto da clínica (página "Sobre")
+│
+├── equipe/             ← Fotos dos profissionais
+│   ├── profissional-1.jpg    ← Atualize o nome em src/data/team.ts
+│   ├── profissional-2.jpg
+│   └── ...
+│
+├── galeria/            ← Fotos da clínica para a galeria
+│   ├── recepcao-1.jpg
+│   ├── consultorio-1.jpg
+│   ├── consultorio-2.jpg
+│   ├── studio-1.jpg
+│   └── ...             ← Adicione novas fotos aqui + cadastre em src/data/gallery.ts
+│
+└── depoimentos/        ← Fotos dos pacientes (opcional)
+    ├── paciente-1.jpg
+    └── ...
+
+======================================================
+FORMATOS ACEITOS: .jpg, .jpeg, .png, .webp
+TAMANHO RECOMENDADO: máx. 300kb por foto (use tinypng.com para compactar)
+======================================================
