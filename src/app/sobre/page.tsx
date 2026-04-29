@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { whatsappLink, WHATSAPP_MENSAGENS, CLINICA } from '@/data/config'
 import { GALERIA, CATEGORIAS_LABELS, type CategoriaGaleria } from '@/data/gallery'
+import GalleryLightbox from '@/components/GalleryLightbox'
 
 export const metadata = {
   title: 'A Clínica | Santé — Fisioterapia em Belém',
@@ -75,28 +76,12 @@ export default function SobrePage() {
         </div>
       </div>
 
-      {/* Galeria */}
+     {/* Galeria */}
       <div className="section bg-cream">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-3xl text-navy mb-4">Conheça nosso espaço</h2>
           <p className="text-gray-500 mb-10">Fotos da clínica, consultórios e studio de Pilates.</p>
-
-          {/* Grade de fotos — adicione fotos em /public/images/galeria/ e no arquivo gallery.ts */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {GALERIA.map((foto) => (
-              <div key={foto.id} className="relative aspect-square rounded-2xl overflow-hidden group">
-                <Image
-                  src={foto.src}
-                  alt={foto.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-white text-xs">{CATEGORIAS_LABELS[foto.categoria]}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryLightbox />
         </div>
       </div>
 

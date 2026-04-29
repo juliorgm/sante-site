@@ -1,52 +1,55 @@
 // ================================================================
 // 📸  GALERIA DE FOTOS
-// ADICIONAR: coloque a foto em /public/images/galeria/
-//            e adicione um bloco { ... } no array abaixo
-// REMOVER:   apague o bloco correspondente
-// ORDEM:     mova os blocos para reordenar
+// ADICIONAR FOTO: coloque em /public/images/galeria/ e adicione
+//                um objeto no array da categoria correspondente
+// ADICIONAR CATEGORIA: adicione a chave em CategoriaGaleria,
+//                      no GALERIA e em CATEGORIAS_LABELS
 // ================================================================
 
 export type CategoriaGaleria = 'recepcao' | 'consultorio' | 'studio' | 'equipe'
 
 export interface FotoGaleria {
-  id:         string
-  src:        string              // '/images/galeria/nome-da-foto.jpg'
-  alt:        string              // descrição da foto (importante para SEO e acessibilidade)
-  categoria:  CategoriaGaleria    // usado para filtrar as fotos por aba
+  id:        string
+  src:       string   // '/images/galeria/nome-do-arquivo.jpg'
+  alt:       string   // descrição pra SEO e acessibilidade
+  categoria: CategoriaGaleria
 }
 
 export const GALERIA: FotoGaleria[] = [
-  // ── RECEPÇÃO ──────────────────────────────────────────────
+  // ── RECEPÇÃO ──────────────────────────────────────────────────
   {
     id:        'recepcao-1',
     src:       '/images/galeria/recepcao-1.jpg',
-    alt:       'Recepção da clínica Santé — ambiente acolhedor e moderno',
+    alt:       'Recepção da clínica Santé — ambiente acolhedor',
     categoria: 'recepcao',
   },
+  // { id: 'recepcao-2', src: '/images/galeria/recepcao-2.jpg', alt: '...', categoria: 'recepcao' },
 
-  // ── CONSULTÓRIO ───────────────────────────────────────────
+  // ── CONSULTÓRIOS ──────────────────────────────────────────────
   {
     id:        'consultorio-1',
     src:       '/images/galeria/consultorio-1.jpg',
-    alt:       'Consultório 1 — equipado para fisioterapia ortopédica',
+    alt:       'Consultório 1 — fisioterapia ortopédica',
     categoria: 'consultorio',
   },
   {
     id:        'consultorio-2',
     src:       '/images/galeria/consultorio-2.jpg',
-    alt:       'Consultório 2 — ambiente individual para terapia manual',
+    alt:       'Consultório 2 — terapia manual',
     categoria: 'consultorio',
   },
+  // { id: 'consultorio-3', src: '/images/galeria/consultorio-3.jpg', alt: '...', categoria: 'consultorio' },
 
-  // ── STUDIO DE PILATES ─────────────────────────────────────
+  // ── STUDIO DE PILATES ─────────────────────────────────────────
   {
     id:        'studio-1',
     src:       '/images/galeria/studio-1.jpg',
-    alt:       'Studio de Pilates — equipado com aparelhos Reformer',
+    alt:       'Studio de Pilates — aparelhos Reformer',
     categoria: 'studio',
   },
+  // { id: 'studio-2', src: '/images/galeria/studio-2.jpg', alt: '...', categoria: 'studio' },
 
-  // ── EQUIPE ────────────────────────────────────────────────
+  // ── EQUIPE ────────────────────────────────────────────────────
   {
     id:        'equipe-1',
     src:       '/images/galeria/equipe-1.jpg',
@@ -55,17 +58,10 @@ export const GALERIA: FotoGaleria[] = [
   },
 
   // ────────────────────────────────────────────────────────────
-  // ✅ PARA ADICIONAR NOVA FOTO, COPIE O BLOCO ABAIXO:
-  // ────────────────────────────────────────────────────────────
-  // {
-  //   id:        'nome-unico',
-  //   src:       '/images/galeria/nome-do-arquivo.jpg',
-  //   alt:       'Descrição da foto para o Google',
-  //   categoria: 'recepcao',  // recepcao | consultorio | studio | equipe
-  // },
+  // ✅ PARA ADICIONAR NOVA FOTO:
+  // { id: 'nome-unico', src: '/images/galeria/arquivo.jpg', alt: 'Descrição', categoria: 'studio' },
 ]
 
-// Rótulos das categorias que aparecem nos botões de filtro
 export const CATEGORIAS_LABELS: Record<CategoriaGaleria, string> = {
   recepcao:    'Recepção',
   consultorio: 'Consultórios',
