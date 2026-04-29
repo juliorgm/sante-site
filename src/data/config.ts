@@ -37,12 +37,12 @@ export function whatsappLink(mensagem: string): string {
 // Mensagens pré-definidas — adicione quantas quiser aqui
 // Cada entrada vira um botão diferente no site
 export const WHATSAPP_MENSAGENS = {
-  geral:        'Olá! Gostaria de saber mais sobre os serviços da Santé.',
-  agendamento:  'Fale com a gente.',
-  funcionamento: 'Olá! Gostaria de saber como funciona o atendimento.',
-  pilates:      'Olá! Tenho interesse nas aulas de Pilates. Como funciona?',
-  preco:        'Olá! Gostaria de informações sobre valores e planos.',
-  localizacao:  'Olá! Gostaria de saber como chegar à clínica.',
+  geral:         'Olá! Gostaria de saber mais sobre os serviços da Santé.',
+  agendamento:   'Olá! Gostaria de saber como funciona o atendimento na Santé.',
+  funcionamento: 'Olá! Gostaria de saber como funciona o atendimento na Santé.',
+  pilates:       'Olá! Gostaria de saber mais sobre as aulas de Pilates da Santé.',
+  preco:         'Olá! Gostaria de mais informações sobre os serviços da Santé.',
+  localizacao:   'Olá! Gostaria de saber como chegar à clínica.',
 }
 
 // ================================================================

@@ -34,7 +34,7 @@ function Hero() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Agende sua avaliação
+              Fale com a gente
             </a>
             <a
               href={whatsappLink(WHATSAPP_MENSAGENS.funcionamento)}
@@ -298,7 +298,7 @@ function CTAFinal() {
           Pronto para viver sem dor?
         </h2>
         <p className="text-white/80 text-lg mb-8">
-          Agende sua avaliação e receba um diagnóstico completo com nossos especialistas.
+          Fale com nossa equipe e tire todas as dúvidas antes de dar o primeiro passo.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a
@@ -307,7 +307,7 @@ function CTAFinal() {
             rel="noopener noreferrer"
             className="bg-white text-teal px-8 py-3 rounded-full font-medium hover:bg-cream transition-colors"
           >
-            Agendar avaliação
+            Fale com a gente
           </a>
           <a
             href={whatsappLink(WHATSAPP_MENSAGENS.funcionamento)}
