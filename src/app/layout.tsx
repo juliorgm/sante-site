@@ -4,6 +4,7 @@ import { SEO, CLINICA } from '@/data/config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // ── SEO automático ────────────────────────────────────────────
 // Edite os valores em src/data/config.ts → SEO
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <SpeedInsights />
       </body>
     </html>
   )
