@@ -45,7 +45,7 @@ export const DEPOIMENTOS: Depoimento[] = [
   {
     id:       'paciente-3',
     nome:     'Mauro Bonna',
-    problema: 'Dor no joelho',
+    problema: 'Pilates',
     texto:    'Pratico Pilates há mais de 20 anos. No passado tive problemas na lombar. Para dirigir a Salinas, parava quatro vezes para me alongar. Hoje, sou capaz de ir e voltar só parar por causa do BRT. Lembra dor de coluna, os mesmo a minha no jornal. \n Sinto também que o Pilates me ajuda no equilíbrio. Quando caio é besteira, tiro a bronca rápido! Sou um pilateiro! Aliás, pretendo praticar Pilates até os 99 anos.',
     //videoUrl: 'https://youtube.com/shorts/DG8NZGJZWec?feature=share', 
     foto:     '/images/depoimentos/sante-fisioterapia-e-pilates-mauro-bonna.jpg',
