@@ -39,7 +39,7 @@ export const GALERIA: FotoGaleria[] = [
   },
   {
     id: "consultorio-2",
-    src: "/images/galeria/consultorio-1.jpg",
+    src: "/images/galeria/consultorio-2.jpg",
     alt: "Consultório 2 — terapia manual",
     categoria: "consultorio",
   },
