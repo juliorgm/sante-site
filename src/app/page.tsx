@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CLINICA, whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
 import { SERVICOS } from '@/data/services'
-import { DEPOIMENTOS } from '@/data/testimonials'
+import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 import { EQUIPE } from '@/data/team'
 
 // ── SEÇÃO HERO ─────────────────────────────────────────────────
@@ -180,58 +180,19 @@ function Servicos() {
 }
 
 // ── SEÇÃO DEPOIMENTOS ──────────────────────────────────────────
+// ── SEÇÃO DEPOIMENTOS ──────────────────────────────────────────
 function Depoimentos() {
-  const destaques = DEPOIMENTOS.filter((d) => d.destaque).slice(0, 3)
-
   return (
     <section className="section bg-cream">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 text-center">
           <span className="badge mb-3 inline-block">Depoimentos</span>
           <h2 className="section-title text-center">O que dizem nossos pacientes</h2>
+          <p className="section-subtitle mx-auto text-center">
+            Histórias reais de quem recuperou a qualidade de vida na Santé.
+          </p>
         </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {destaques.map((dep) => (
-            <div key={dep.id} className="card">
-              {/* Estrelas */}
-              <div className="flex gap-1 mb-3">
-                {Array.from({ length: dep.nota }).map((_, i) => (
-                  <span key={i} className="text-gold text-sm">★</span>
-                ))}
-              </div>
-
-              {/* Badge de problema tratado */}
-              <span className="badge text-xs mb-3 inline-block">{dep.problema}</span>
-
-              {/* Texto */}
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">
-                &ldquo;{dep.texto}&rdquo;
-              </p>
-
-              {/* Paciente */}
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
-                {dep.foto ? (
-                  <Image
-                    src={dep.foto}
-                    alt={dep.nome}
-                    width={36}
-                    height={36}
-                    className="rounded-full object-cover w-9 h-9"
-                  />
-                ) : (
-                  <div className="w-9 h-9 rounded-full bg-teal/20 flex items-center justify-center text-teal text-sm font-medium">
-                    {dep.nome.charAt(0)}
-                  </div>
-                )}
-                <div>
-                  <p className="text-navy text-sm font-medium">{dep.nome}</p>
-                  {dep.idade && <p className="text-gray-400 text-xs">{dep.idade} anos</p>}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <TestimonialsCarousel />
       </div>
     </section>
   )
