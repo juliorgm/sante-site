@@ -66,7 +66,7 @@ function Hero() {
         {/* TROQUE a foto: coloque em /public/images/hero.jpg */}
         <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-xl">
           <Image
-            src="/images/hero.jpg"
+            src="/images/hero-2.jpg"
             alt="Fisioterapeuta atendendo paciente na Santé"
             fill
             className="object-cover"
