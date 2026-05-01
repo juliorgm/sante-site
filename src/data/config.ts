@@ -50,7 +50,7 @@ export const WHATSAPP_MENSAGENS = {
 // ================================================================
 export const REDES_SOCIAIS = {
   instagram: 'https://instagram.com/sante.fisio', // ← troque pela URL real
-  facebook:  'https://facebook.com/sante.fisio.belem',  // ← troque pela URL real
+  facebook:  'https://www.facebook.com/sante.fisio.belem/',  // ← troque pela URL real
   youtube:   '',  // deixe vazio para não exibir
 }
 

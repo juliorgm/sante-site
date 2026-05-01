@@ -105,7 +105,7 @@ export default function ContatoPage() {
               3. Copie o link do src="..." e cole abaixo
             */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127391.8!2d-48.4902!3d-1.4558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48f498a0f87%3A0xa4bc38a8dd7db01f!2sBel%C3%A9m%2C%20PA!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.0580914277448!2d-48.48867443134868!3d-1.4597416308211315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48ffaec4c8fc9%3A0x47070dffadfe2add!2sSant%C3%A9%20Fisioterapia%20e%20Pilates!5e0!3m2!1spt-BR!2sbr!4v1777610512037!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
