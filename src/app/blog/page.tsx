@@ -11,37 +11,12 @@
 // ================================================================
 
 import Link from 'next/link'
+import { POSTS } from '@/data/posts'
 
 export const metadata = {
   title: 'Blog | Santé — Fisioterapia em Belém',
   description: 'Artigos sobre fisioterapia, postura, dor e qualidade de vida.',
 }
-
-// ── Adicione seus artigos aqui ─────────────────────────────────
-const POSTS = [
-  {
-    slug:      'atendimento-individual-50-minutos',
-    titulo:    'Por que o atendimento individual de 50 minutos faz diferença no resultado?',
-    resumo:    'Em clínicas convencionais, o fisioterapeuta atende múltiplos pacientes ao mesmo tempo. Entenda por que isso compromete o resultado do tratamento.',
-    data:      '2024-01-15',
-    categoria: 'Fisioterapia',
-    // capa:   '/images/blog/artigo-1.jpg',  // descomente quando tiver a foto
-  },
-  {
-    slug:      'rpg-ou-fisioterapia-convencional',
-    titulo:    'RPG ou Fisioterapia Convencional: qual a diferença?',
-    resumo:    'Muitos pacientes chegam com dúvida: qual técnica é melhor para minha dor postural? A resposta depende do seu caso — veja como decidir.',
-    data:      '2024-01-08',
-    categoria: 'RPG',
-  },
-  {
-    slug:      'pilates-para-dor-lombar',
-    titulo:    '5 benefícios do Pilates para quem tem dor lombar',
-    resumo:    'A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clínico pode ser um aliado poderoso — veja como.',
-    data:      '2023-12-20',
-    categoria: 'Pilates',
-  },
-]
 
 function formatarData(iso: string) {
   return new Date(iso).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
