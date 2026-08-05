@@ -52,7 +52,7 @@ export const EQUIPE: Profissional[] = [
     destaque: true,
   },
   {
-    id:     'profissional-2',
+    id:     'profissional-3',
     nome:   'Dr. Milos Eduardo',
     titulo: 'Fisioterapeuta',
     crefito: 'CREFITO-8 / 405414-F',
@@ -67,7 +67,7 @@ export const EQUIPE: Profissional[] = [
   },
 
     {
-    id:     'profissional-2',
+    id:     'profissional-4',
     nome:   'Dr. Camila Nobre',
     titulo: 'Fisioterapeuta',
     crefito: 'CREFITO-8 / 168221-F',
