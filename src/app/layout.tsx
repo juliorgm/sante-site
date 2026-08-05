@@ -46,7 +46,7 @@ function SchemaMarkup() {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday']
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday'],
         opens: '06:30',
         closes: '20:30',
       },
