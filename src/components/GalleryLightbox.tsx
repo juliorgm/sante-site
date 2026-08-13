@@ -57,6 +57,33 @@ export default function GalleryLightbox() {
     return () => { document.body.style.overflow = '' }
   }, [lightbox])
 
+  // Focus trap: move focus into the lightbox and restore after close
+  useEffect(() => {
+    if (!lightbox) return
+    const previouslyFocused = document.activeElement as HTMLElement | null
+    // find first focusable element in dialog
+    const dialog = document.querySelector('[role="dialog"]') as HTMLElement | null
+    const focusable = dialog ? dialog.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    ) : null
+    const first = focusable && focusable.length ? focusable[0] : dialog
+    if (first && (first as HTMLElement).focus) (first as HTMLElement).focus()
+
+    function keepFocus(e: FocusEvent) {
+      if (!dialog) return
+      if (!dialog.contains(e.target as Node)) {
+        e.stopPropagation()
+        ;(first as HTMLElement)?.focus()
+      }
+    }
+
+    document.addEventListener('focusin', keepFocus)
+    return () => {
+      document.removeEventListener('focusin', keepFocus)
+      if (previouslyFocused && previouslyFocused.focus) previouslyFocused.focus()
+    }
+  }, [lightbox])
+
   const fotoAtual = lightbox ? lightbox.fotos[lightbox.index] : null
 
   return (
@@ -112,6 +139,8 @@ export default function GalleryLightbox() {
       {/* Lightbox */}
       {lightbox && fotoAtual && (
         <div
+          role="dialog"
+          aria-modal="true"
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
           onClick={fecharLightbox}
         >
@@ -141,6 +170,8 @@ export default function GalleryLightbox() {
 
           {/* Foto */}
           <div
+            ref={(_el) => { /* focus managed in effect below */ }}
+            tabIndex={-1}
             className="relative max-w-4xl max-h-[85vh] w-full mx-16"
             onClick={(e) => e.stopPropagation()}
           >
