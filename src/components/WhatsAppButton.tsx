@@ -38,7 +38,10 @@ export default function WhatsAppButton() {
               rel="noopener noreferrer"
               className="bg-white text-navy text-sm font-medium px-4 py-2 rounded-full shadow-lg border border-gray-100 hover:bg-green-50 hover:border-green-200 transition-all whitespace-nowrap"
               onClick={() => {
-                trackWhatsAppClick(opcao.label)
+                window.gtag?.('event', 'whatsapp_click', {
+                  event_category: 'contact',
+                  event_label: opcao.label,
+                })
                 setOpen(false)
               }}
             >
