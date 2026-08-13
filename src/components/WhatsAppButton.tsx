@@ -9,6 +9,7 @@
 
 import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
 import { useState } from 'react'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 export default function WhatsAppButton() {
   const [open, setOpen] = useState(false)
@@ -36,7 +37,10 @@ export default function WhatsAppButton() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-navy text-sm font-medium px-4 py-2 rounded-full shadow-lg border border-gray-100 hover:bg-green-50 hover:border-green-200 transition-all whitespace-nowrap"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                trackWhatsAppClick(opcao.label)
+                setOpen(false)
+              }}
             >
               {opcao.label}
             </a>
