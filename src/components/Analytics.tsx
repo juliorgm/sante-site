@@ -1,6 +1,6 @@
 import Script from 'next/script'
 
-const GA_ID = 'G-SC5ZD7T8NQ'
+const GA_ID = 'G-X500LZ2ZMQ'
 
 export default function Analytics() {
   return (
