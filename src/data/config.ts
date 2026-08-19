@@ -55,6 +55,16 @@ export const REDES_SOCIAIS = {
 }
 
 // ================================================================
+// 📊 GOOGLE TAG — envia dados pro GA4 e pro Google Ads (conta da Nat)
+// ================================================================
+// ID "guarda-chuva" da conta da Nat. Alimenta tanto o GA4 quanto o
+// Google Ads (conversões de anúncio) com um único snippet — por
+// isso usamos o GT-, e não o G- do GA4 sozinho.
+// Se precisar trocar/atualizar, pegue o ID em: Google Ads ou
+// Analytics da conta da Nat → "Tag do Google".
+export const GOOGLE_TAG_ID = 'GT-KF63NMB5'
+
+// ================================================================
 // 🗺️  SEO — aparece no Google
 // ================================================================
 export const SEO = {

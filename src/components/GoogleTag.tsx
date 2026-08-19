@@ -1,12 +1,11 @@
 import Script from 'next/script'
+import { GOOGLE_TAG_ID } from '@/data/config'
 
-const GA_ID = 'G-X500LZ2ZMQ'
-
-export default function Analytics() {
+export default function GoogleTag() {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
         strategy="afterInteractive"
       />
 
@@ -22,7 +21,7 @@ export default function Analytics() {
           }
 
           gtag('js', new Date());
-          gtag('config', '${GA_ID}');
+          gtag('config', '${GOOGLE_TAG_ID}');
         `}
       </Script>
     </>
