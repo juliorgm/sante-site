@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import BlogPostSchema from '@/components/BlogPostSchema'
 
 export const metadata = {
   title: 'RPG ou Fisioterapia Convencional: qual a diferença? | Santé',
@@ -9,6 +10,12 @@ export const metadata = {
 export default function Artigo2() {
   return (
     <div className="pt-24">
+      <BlogPostSchema
+        titulo="RPG ou Fisioterapia Convencional: qual a diferença?"
+        resumo="Muitos pacientes chegam com dúvida: qual técnica é melhor para minha dor postural? A resposta depende do seu caso — veja como decidir."
+        data="2024-01-08"
+        slug="rpg-ou-fisioterapia-convencional"
+      />
       <div className="bg-cream section pb-12">
         <div className="max-w-3xl mx-auto">
           <Link href="/blog" className="text-teal text-sm hover:underline mb-6 inline-block">

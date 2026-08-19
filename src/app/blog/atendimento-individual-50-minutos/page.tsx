@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import BlogPostSchema from '@/components/BlogPostSchema'
 
 export const metadata = {
   title: 'Por que o atendimento individual de 50 minutos faz diferença? | Santé',
@@ -9,6 +10,12 @@ export const metadata = {
 export default function Artigo1() {
   return (
     <div className="pt-24">
+      <BlogPostSchema
+        titulo="Por que o atendimento individual de 50 minutos faz diferença no resultado?"
+        resumo="Em clínicas convencionais, o fisioterapeuta atende múltiplos pacientes ao mesmo tempo. Entenda por que isso compromete o resultado do tratamento."
+        data="2024-01-15"
+        slug="atendimento-individual-50-minutos"
+      />
       <div className="bg-cream section pb-12">
         <div className="max-w-3xl mx-auto">
           <Link href="/blog" className="text-teal text-sm hover:underline mb-6 inline-block">

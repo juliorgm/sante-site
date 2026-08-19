@@ -68,7 +68,7 @@ export const EQUIPE: Profissional[] = [
 
     {
     id:     'profissional-4',
-    nome:   'Dr. Camila Nobre',
+    nome:   'Dra. Camila Nobre',
     titulo: 'Fisioterapeuta',
     crefito: 'CREFITO-8 / 168221-F',
     especializacoes: [

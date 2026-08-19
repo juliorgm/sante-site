@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import BlogPostSchema from '@/components/BlogPostSchema'
 
 export const metadata = {
   title: '5 benefícios do Pilates para quem tem dor lombar | Santé',
@@ -9,6 +10,12 @@ export const metadata = {
 export default function Artigo3() {
   return (
     <div className="pt-24">
+      <BlogPostSchema
+        titulo="5 benefícios do Pilates para quem tem dor lombar"
+        resumo="A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clínico pode ser um aliado poderoso — veja como."
+        data="2023-12-20"
+        slug="pilates-para-dor-lombar"
+      />
       <div className="bg-cream section pb-12">
         <div className="max-w-3xl mx-auto">
           <Link href="/blog" className="text-teal text-sm hover:underline mb-6 inline-block">
