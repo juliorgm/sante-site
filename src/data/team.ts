@@ -51,23 +51,8 @@ export const EQUIPE: Profissional[] = [
     foto:    '/images/equipe/professora-pilates-em-belém.png',
     destaque: true,
   },
-  {
+      {
     id:     'profissional-3',
-    nome:   'Dr. Milos Eduardo',
-    titulo: 'Fisioterapeuta',
-    crefito: 'CREFITO-8 / 405414-F',
-    especializacoes: [
-      'Pilates',
-      'Reforço Muscular',
-      'Fisioterapia Ortopédica',
-      'Terapia Manual',
-    ],
-    foto:    '/images/equipe/fisioterapeuta-na-batista-campos.png',
-    destaque: true,
-  },
-
-    {
-    id:     'profissional-4',
     nome:   'Dra. Camila Nobre',
     titulo: 'Fisioterapeuta',
     crefito: 'CREFITO-8 / 168221-F',
@@ -80,6 +65,22 @@ export const EQUIPE: Profissional[] = [
     foto:    '/images/equipe/professora-pilates-em-batista-campos-belém.png',
     destaque: true,
   },
+  {
+    id:     'profissional-4',
+    nome:   'Dra. Juliana Gomes',
+    titulo: 'Fisioterapeuta',
+    crefito: 'CREFITO-12 / 444859-F',
+    especializacoes: [
+      'Pilates',
+      'Reforço Muscular',
+      'Fisioterapia Ortopédica',
+      'Terapia Manual',
+    ],
+    foto:    '/images/equipe/fisioterapeuta-na-batista-campos.png',
+    destaque: true,
+  },
+
+
 
   // ────────────────────────────────────────────────────────────
   // ✅ PARA ADICIONAR UM NOVO PROFISSIONAL, COPIE O BLOCO ABAIXO:
