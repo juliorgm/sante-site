@@ -81,6 +81,10 @@ export function whatsappLink(mensagem: string): string {
 // Cada entrada vira um botão diferente no site
 export const WHATSAPP_MENSAGENS = {
   geral:         'Olá! Gostaria de saber mais sobre os serviços da Santé.',
+  // ℹ️ Usada pelo CTA principal ("Fale com a gente", cabeçalho e hero).
+  //    O rótulo convida a conversar e a mensagem fala em agendar — a
+  //    assimetria é DELIBERADA. Ver docs/decisions/0001-cta-principal.md.
+  //    Não "corrija" sem decisão nova do Júlio.
   agendamento:   'Olá! Gostaria de agendar uma avaliação na Santé.',
   funcionamento: 'Olá! Gostaria de saber como funciona o atendimento na Santé.',
   fisioterapia:  'Olá! Gostaria de saber mais sobre os atendimentos de fisioterapia da Santé.',
