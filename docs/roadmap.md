@@ -190,6 +190,11 @@ prioridade, mas cobre quem não vai usar WhatsApp.
 
 ---
 
+> **Specs prontas:** `specs/0002-performance-carregamento.md` (onda 4) e
+> `specs/0003-seguranca-e-ci.md` (onda 5). Escritas em 16/09 para serem executadas por um
+> modelo mais simples em sessão separada: critérios de aceite numéricos, escopo negativo
+> explícito e zero pergunta em aberto.
+
 ## Onda 4 — Design (seu item 4)
 
 **4.1 — Migrar as fontes para `next/font` (DES-1).** Remove o `@import` bloqueante, faz
