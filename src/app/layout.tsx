@@ -7,6 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
 import GoogleTag from '@/components/GoogleTag'
+import OrigemTracker from '@/components/OrigemTracker'
 
 // ── SEO automático ────────────────────────────────────────────
 // Edite os valores em src/data/config.ts → SEO
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SpeedInsights />
         <Analytics />
         <GoogleTag />
+        <OrigemTracker />
       </body>
     </html>
   )

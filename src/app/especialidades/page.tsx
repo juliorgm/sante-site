@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { SERVICOS } from '@/data/services'
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export const metadata = {
   title: 'Especialidades | Santé — Fisioterapia em Belém',
@@ -39,14 +40,14 @@ export default function EspecialidadesPage() {
                 >
                   Saiba mais
                 </Link>
-                <a
-                  href={whatsappLink(servico.cta || WHATSAPP_MENSAGENS.agendamento)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  mensagem={servico.cta || WHATSAPP_MENSAGENS.agendamento}
+                  secao="lista_especialidades"
+                  assunto={servico.id}
                   className="btn-primary text-center text-sm"
                 >
                   Agendar
-                </a>
+                </WhatsAppLink>
               </div>
             </div>
           ))}

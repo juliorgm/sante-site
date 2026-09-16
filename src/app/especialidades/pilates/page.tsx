@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export const metadata = {
   title: 'Pilates em Belém | Fisioterapeuta Especializado — Santé',
@@ -37,12 +38,13 @@ export default function PilatesPage() {
           </p>
 
           
-           <a href={whatsappLink(CTA_CONVERSAR)}
-            target="_blank"
-            rel="noopener noreferrer"
+           <WhatsAppLink
+            mensagem={CTA_CONVERSAR}
+            secao="pilates_topo"
+            assunto="pilates"
             className="btn-primary">
             Quero começar essa mudança
-          </a>
+          </WhatsAppLink>
 
           {/* FOTO AQUI — quando tiver a imagem:
           <div className="relative rounded-3xl overflow-hidden aspect-video mt-12 shadow-xl">
@@ -240,22 +242,22 @@ export default function PilatesPage() {
             Fala com a gente e tira suas dúvidas antes de dar esse passo.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href={whatsappLink(CTA_CONVERSAR)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              mensagem={CTA_CONVERSAR}
+              secao="pilates_cta_final"
+              assunto="pilates"
               className="bg-white text-teal px-8 py-3 rounded-full font-medium hover:bg-cream transition-colors"
             >
               Quero saber mais
-            </a>
-            <a
-              href={whatsappLink(CTA_AGENDAMENTO)}
-              target="_blank"
-              rel="noopener noreferrer"
+            </WhatsAppLink>
+            <WhatsAppLink
+              mensagem={CTA_AGENDAMENTO}
+              secao="pilates_cta_final"
+              assunto="agendamento"
               className="border border-white/40 text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
             >
               Já quero agendar minha avaliação
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </section>

@@ -7,21 +7,23 @@
 //   → src/data/config.ts → WHATSAPP_MENSAGENS.geral
 // ================================================================
 
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
 import { useState } from 'react'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export default function WhatsAppButton() {
   const [open, setOpen] = useState(false)
 
   // Opções que aparecem ao expandir o botão
   // Para adicionar/remover opções, edite este array:
+  // "assunto" é o que aparece na medição — mantenha estável mesmo que
+  // o rótulo visível mude, senão o histórico do GA4 quebra.
   const opcoes = [
-    { label: 'Agendar avaliação',      msg: WHATSAPP_MENSAGENS.agendamento },
-    { label: 'Como funciona?',         msg: WHATSAPP_MENSAGENS.funcionamento },
-    { label: 'Informações sobre Pilates', msg: WHATSAPP_MENSAGENS.pilates },
-    { label: 'Valores e planos',       msg: WHATSAPP_MENSAGENS.preco },
-    { label: 'Como chegar',            msg: WHATSAPP_MENSAGENS.localizacao },
+    { label: 'Agendar avaliação',         assunto: 'agendamento',   msg: WHATSAPP_MENSAGENS.agendamento },
+    { label: 'Como funciona?',            assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
+    { label: 'Informações sobre Pilates', assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
+    { label: 'Valores e planos',          assunto: 'preco',         msg: WHATSAPP_MENSAGENS.preco },
+    { label: 'Como chegar',               assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
   ]
 
   return (
@@ -31,22 +33,16 @@ export default function WhatsAppButton() {
       {open && (
         <div className="flex flex-col gap-2 mb-2 animate-fade-in-up">
           {opcoes.map((opcao) => (
-            <a
+            <WhatsAppLink
               key={opcao.label}
-              href={whatsappLink(opcao.msg)}
-              target="_blank"
-              rel="noopener noreferrer"
+              mensagem={opcao.msg}
+              secao="botao_flutuante"
+              assunto={opcao.assunto}
               className="bg-white text-navy text-sm font-medium px-4 py-2 rounded-full shadow-lg border border-gray-100 hover:bg-green-50 hover:border-green-200 transition-all whitespace-nowrap"
-              onClick={() => {
-                window.gtag?.('event', 'whatsapp_click', {
-                  event_category: 'contact',
-                  event_label: opcao.label,
-                })
-                setOpen(false)
-              }}
+              aoClicar={() => setOpen(false)}
             >
               {opcao.label}
-            </a>
+            </WhatsAppLink>
           ))}
         </div>
       )}
@@ -56,7 +52,8 @@ export default function WhatsAppButton() {
         onClick={() => setOpen(!open)}
         className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg whatsapp-pulse transition-transform hover:scale-105"
         style={{ backgroundColor: '#25D366' }}
-        aria-label="Fale conosco pelo WhatsApp"
+        aria-label={open ? 'Fechar opções de contato' : 'Fale conosco pelo WhatsApp'}
+        aria-expanded={open}
       >
         {open ? (
           // Ícone X quando aberto

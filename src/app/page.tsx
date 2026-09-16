@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { CLINICA, whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { CLINICA, WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 import { SERVICOS } from '@/data/services'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 import { EQUIPE } from '@/data/team'
@@ -30,22 +31,22 @@ function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <a
-              href={whatsappLink(WHATSAPP_MENSAGENS.agendamento)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              mensagem={WHATSAPP_MENSAGENS.agendamento}
+              secao="hero"
+              assunto="agendamento"
               className="btn-primary"
             >
               Fale com a gente
-            </a>
-            <a
-              href={whatsappLink(WHATSAPP_MENSAGENS.funcionamento)}
-              target="_blank"
-              rel="noopener noreferrer"
+            </WhatsAppLink>
+            <WhatsAppLink
+              mensagem={WHATSAPP_MENSAGENS.funcionamento}
+              secao="hero"
+              assunto="funcionamento"
               className="btn-outline"
             >
               Como funciona?
-            </a>
+            </WhatsAppLink>
           </div>
 
           {/* Stats de confiança */}
@@ -79,14 +80,14 @@ function Hero() {
             <p className="text-navy font-medium text-sm mb-2">
               Primeira consulta — avaliação completa
             </p>
-            <a
-              href={whatsappLink(WHATSAPP_MENSAGENS.agendamento)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              mensagem={WHATSAPP_MENSAGENS.agendamento}
+              secao="hero_card"
+              assunto="agendamento"
               className="btn-primary text-xs w-full justify-center"
             >
               Agendar agora
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </div>
@@ -159,14 +160,14 @@ function Servicos() {
               <div className="text-3xl mb-4">{servico.icone}</div>
               <h3 className="font-serif text-xl text-navy mb-2">{servico.nome}</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">{servico.resumo}</p>
-              <a
-                href={whatsappLink(servico.cta || WHATSAPP_MENSAGENS.geral)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                mensagem={servico.cta || WHATSAPP_MENSAGENS.geral}
+                secao="card_servico"
+                assunto={servico.id}
                 className="text-teal text-sm font-medium hover:underline"
               >
                 Saiba mais →
-              </a>
+              </WhatsAppLink>
             </div>
           ))}
         </div>
@@ -320,22 +321,22 @@ function CTAFinal() {
           Fale com nossa equipe e tire todas as dúvidas antes de dar o primeiro passo.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <a
-            href={whatsappLink(WHATSAPP_MENSAGENS.agendamento)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            mensagem={WHATSAPP_MENSAGENS.agendamento}
+            secao="cta_final"
+            assunto="agendamento"
             className="bg-white text-teal px-8 py-3 rounded-full font-medium hover:bg-cream transition-colors"
           >
             Fale com a gente
-          </a>
-          <a
-            href={whatsappLink(WHATSAPP_MENSAGENS.funcionamento)}
-            target="_blank"
-            rel="noopener noreferrer"
+          </WhatsAppLink>
+          <WhatsAppLink
+            mensagem={WHATSAPP_MENSAGENS.funcionamento}
+            secao="cta_final"
+            assunto="funcionamento"
             className="border border-white/40 text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
           >
             Tirar dúvidas primeiro
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </section>

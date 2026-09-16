@@ -2,7 +2,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 // ── Links de navegação ──────────────────────────────────────────
 // Para adicionar/remover uma página do menu, edite este array:
@@ -49,14 +50,14 @@ export default function Header() {
 
         {/* CTA + menu mobile */}
         <div className="flex items-center gap-3">
-          <a
-            href={whatsappLink(WHATSAPP_MENSAGENS.agendamento)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            mensagem={WHATSAPP_MENSAGENS.agendamento}
+            secao="header"
+            assunto="agendamento"
             className="hidden md:inline-flex btn-primary text-xs"
           >
             Fale com a gente
-          </a>
+          </WhatsAppLink>
 
           {/* Hambúrguer mobile */}
           <button
@@ -87,14 +88,14 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={whatsappLink(WHATSAPP_MENSAGENS.agendamento)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            mensagem={WHATSAPP_MENSAGENS.agendamento}
+            secao="menu_mobile"
+            assunto="agendamento"
             className="btn-primary text-center mt-2"
           >
             Fale com a gente
-          </a>
+          </WhatsAppLink>
         </div>
       )}
     </header>

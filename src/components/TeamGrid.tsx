@@ -14,8 +14,8 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState, useCallback } from 'react'
 import type { Profissional, Formacao } from '@/data/team'
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
-import { trackWhatsAppClick } from '@/lib/analytics'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 const ROTULO_TIPO: Record<Formacao['tipo'], string> = {
   graduacao: 'Graduação',
@@ -169,15 +169,14 @@ function PerfilDialog({ prof, onClose }: { prof: Profissional; onClose: () => vo
             </p>
           )}
 
-          <a
-            href={whatsappLink(WHATSAPP_MENSAGENS.agendamento)}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackWhatsAppClick('perfil_equipe:' + prof.id)}
+          <WhatsAppLink
+            mensagem={WHATSAPP_MENSAGENS.agendamento}
+            secao="perfil_equipe"
+            assunto={prof.id}
             className="btn-primary w-full justify-center"
           >
             Agendar avaliação
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </div>

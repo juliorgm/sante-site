@@ -1,4 +1,5 @@
-import { CLINICA, whatsappLink, WHATSAPP_MENSAGENS, REDES_SOCIAIS, formatarTurnos } from '@/data/config'
+import { CLINICA, WHATSAPP_MENSAGENS, REDES_SOCIAIS, formatarTurnos } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export const metadata = {
   title: 'Contato | Santé — Fisioterapia em Belém',
@@ -34,17 +35,17 @@ export default function ContatoPage() {
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  { label: 'Agendar avaliação',          msg: WHATSAPP_MENSAGENS.agendamento },
-                  { label: 'Como funciona o atendimento', msg: WHATSAPP_MENSAGENS.funcionamento },
-                  { label: 'Informações sobre Pilates',   msg: WHATSAPP_MENSAGENS.pilates },
-                  { label: 'Valores e planos',            msg: WHATSAPP_MENSAGENS.preco },
-                  { label: 'Como chegar à clínica',       msg: WHATSAPP_MENSAGENS.localizacao },
+                  { label: 'Agendar avaliação',           assunto: 'agendamento',   msg: WHATSAPP_MENSAGENS.agendamento },
+                  { label: 'Como funciona o atendimento',  assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
+                  { label: 'Informações sobre Pilates',    assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
+                  { label: 'Valores e planos',             assunto: 'preco',         msg: WHATSAPP_MENSAGENS.preco },
+                  { label: 'Como chegar à clínica',        assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
                 ].map((item) => (
-                  <a
+                  <WhatsAppLink
                     key={item.label}
-                    href={whatsappLink(item.msg)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    mensagem={item.msg}
+                    secao="contato"
+                    assunto={item.assunto}
                     className="flex items-center gap-3 p-3 rounded-xl border border-gray-100 hover:border-teal/30 hover:bg-cream transition-all group"
                   >
                     <span className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
@@ -55,7 +56,7 @@ export default function ContatoPage() {
                     </span>
                     <span className="text-sm text-navy group-hover:text-teal transition-colors">{item.label}</span>
                     <span className="ml-auto text-gray-300 group-hover:text-teal">→</span>
-                  </a>
+                  </WhatsAppLink>
                 ))}
               </div>
             </div>

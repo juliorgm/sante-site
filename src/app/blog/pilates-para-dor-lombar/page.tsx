@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 import BlogPostSchema from '@/components/BlogPostSchema'
 
 export const metadata = {
@@ -113,13 +114,14 @@ export default function Artigo3() {
                 Fale com nossa equipe. A gente analisa o seu caso e indica o melhor caminho.
               </p>
               
-               <a href={whatsappLink(WHATSAPP_MENSAGENS.funcionamento)}
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                mensagem={WHATSAPP_MENSAGENS.funcionamento}
+                secao="blog"
+                assunto="funcionamento"
                 className="btn-primary"
               >
                 Fale com a gente
-              </a>
+              </WhatsAppLink>
             </div>
           </div>
         </div>

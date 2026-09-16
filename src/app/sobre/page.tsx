@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { whatsappLink, WHATSAPP_MENSAGENS, CLINICA } from '@/data/config'
+import { WHATSAPP_MENSAGENS, CLINICA } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 import { GALERIA, CATEGORIAS_LABELS, type CategoriaGaleria } from '@/data/gallery'
 import GalleryLightbox from '@/components/GalleryLightbox'
 
@@ -90,14 +91,14 @@ export default function SobrePage() {
         <div className="max-w-2xl mx-auto">
           <h2 className="font-serif text-3xl mb-4">Venha nos conhecer pessoalmente</h2>
           <p className="text-white/60 mb-8">{CLINICA.endereco}</p>
-          <a
-            href={whatsappLink(WHATSAPP_MENSAGENS.localizacao)}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppLink
+            mensagem={WHATSAPP_MENSAGENS.localizacao}
+            secao="sobre_visita"
+            assunto="localizacao"
             className="btn-primary"
           >
             Como chegar
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </div>

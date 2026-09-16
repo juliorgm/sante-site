@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CLINICA, REDES_SOCIAIS, whatsappLink, WHATSAPP_MENSAGENS, formatarTurnos } from '@/data/config'
+import { CLINICA, REDES_SOCIAIS, WHATSAPP_MENSAGENS, formatarTurnos } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export default function Footer() {
   return (
@@ -66,14 +67,14 @@ export default function Footer() {
                 <span className="text-white">{h.label}:</span> {formatarTurnos(h.turnos)}
               </p>
             ))}
-            <a
-              href={whatsappLink(WHATSAPP_MENSAGENS.geral)}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              mensagem={WHATSAPP_MENSAGENS.geral}
+              secao="footer"
+              assunto="geral"
               className="text-gold hover:underline"
             >
               WhatsApp: (91) 98060-9411
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       </div>

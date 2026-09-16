@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { SERVICOS } from '@/data/services'
-import { whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { WHATSAPP_MENSAGENS } from '@/data/config'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export function generateStaticParams() {
   return SERVICOS.map((s) => ({ slug: s.id }))
@@ -69,14 +70,14 @@ export default async function EspecialidadePage({ params }: { params: Promise<{ 
                 Fale com nossa equipe e tire todas as suas dúvidas.
               </p>
               <div className="flex flex-col gap-3">
-                <a
-                  href={whatsappLink(servico.cta || WHATSAPP_MENSAGENS.funcionamento)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  mensagem={servico.cta || WHATSAPP_MENSAGENS.funcionamento}
+                  secao="especialidade"
+                  assunto={servico.id}
                   className="btn-primary text-center"
                 >
                   Fale com a gente
-                </a>
+                </WhatsAppLink>
               </div>
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-xs text-gray-400 text-center">
