@@ -22,7 +22,6 @@ export default function WhatsAppButton() {
     { label: 'Agendar avaliação',         assunto: 'agendamento',   msg: WHATSAPP_MENSAGENS.agendamento },
     { label: 'Como funciona?',            assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
     { label: 'Informações sobre Pilates', assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
-    { label: 'Valores e planos',          assunto: 'preco',         msg: WHATSAPP_MENSAGENS.preco },
     { label: 'Como chegar',               assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
   ]
 
