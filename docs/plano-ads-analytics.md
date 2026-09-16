@@ -277,6 +277,20 @@ o `gclid` é capturado na chegada e propagado até dentro da mensagem do WhatsAp
 código curto (`SA-ADS-0916`). Verificado no navegador: captura, propagação para todos os
 links, persistência ao navegar sem parâmetro na URL, e disparo do evento.
 
+**Dimensões personalizadas registradas em 16/09/2026** na propriedade GA4 `p534828718`
+(conta `a392812396`, fluxo `santefisioterapia.com.br`), todas com escopo **Evento**:
+
+| Nome do recurso | Parâmetro |
+|---|---|
+| Seção do site | `secao` |
+| Assunto do contato | `assunto` |
+| Código de origem | `origem` |
+| Fonte Santé | `fonte` |
+| Campanha Santé | `campanha` |
+
+Como não há retroatividade, a coleta dessas dimensões começa nesta data. Não renomeie o
+campo "parâmetro" de nenhuma delas: isso zera o histórico.
+
 **O próximo passo depende de você, não de código:** ligar a ação de conversão do Google
 Ads ao evento `whatsapp_click` já enriquecido (pendência P18 — falta o ID `AW-`), e montar
 a planilha de atendimento (item 5). A partir daí é esperar duas a quatro semanas de dado

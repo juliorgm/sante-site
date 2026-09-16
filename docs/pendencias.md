@@ -68,3 +68,6 @@ começa sem estas respostas.
 - ~~"Pilates Clínico" no blog~~ — corrigido (`3ab2c68`)
 - ~~CREFITO da Camila~~ — informado no currículo de 16/09
 - ~~Sobrenome da Liane~~ — Melo, aplicado
+- ~~Registrar as dimensões personalizadas no GA4~~ — **as cinco criadas em 16/09/2026** na
+  propriedade `p534828718`, escopo Evento (`secao`, `assunto`, `origem`, `fonte`,
+  `campanha`). A coleta começa nesta data; não há retroatividade.
