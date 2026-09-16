@@ -271,6 +271,17 @@ atendente, e é o único número que justifica aumentar orçamento.
 
 ## 6. Ordem de execução
 
+**Status em 2026-09-16: itens 1 a 4 implementados (`604082b`).** Os 20 CTAs passaram a
+disparar `whatsapp_click` com `pagina`, `secao`, `assunto`, `origem`, `fonte` e `campanha`;
+o `gclid` é capturado na chegada e propagado até dentro da mensagem do WhatsApp como
+código curto (`SA-ADS-0916`). Verificado no navegador: captura, propagação para todos os
+links, persistência ao navegar sem parâmetro na URL, e disparo do evento.
+
+**O próximo passo depende de você, não de código:** ligar a ação de conversão do Google
+Ads ao evento `whatsapp_click` já enriquecido (pendência P18 — falta o ID `AW-`), e montar
+a planilha de atendimento (item 5). A partir daí é esperar duas a quatro semanas de dado
+real antes de reestruturar a campanha.
+
 | # | O quê | Depende de | Esforço |
 |---|---|---|---|
 | 1 | Definir e congelar o modelo de eventos (seção 2) | — | 1h |

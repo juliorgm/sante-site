@@ -118,12 +118,12 @@ Só depois disto o Meta Pixel pode entrar. Nesta ordem, não na inversa.
 Você escolheu a camada de custo zero, e ela realmente resolve a maior parte do problema.
 O que falta hoje não é ferramenta, é encanamento: os dados são destruídos no caminho.
 
-**2.1 — Instrumentar todos os CTAs (MED-1, MED-2).** Consolidar tudo em uma função única
+**2.1 — Instrumentar todos os CTAs (MED-1, MED-2). ✅ FEITO em 16/09 (`604082b`).** Consolidar tudo em uma função única
 em `lib/analytics.ts`, apagar a chamada inline do `WhatsAppButton`, e instrumentar os mais
 de quinze pontos de saída listados na auditoria. Cada evento deve carregar de onde partiu:
 página de origem, seção e assunto. Sem isso não dá para saber que o blog converte.
 
-**2.2 — Propagar `gclid` e UTM para dentro da conversa (MED-4).** Este é o item mais
+**2.2 — Propagar `gclid` e UTM para dentro da conversa (MED-4). ✅ FEITO em 16/09 (`604082b`).** Este é o item mais
 importante da onda inteira. Capturar os parâmetros na chegada, guardar em
 `sessionStorage`, e gerar um código curto de origem — algo como `#SA-GADS-PIL-0915` — que
 entra na mensagem pré-preenchida do WhatsApp. A Natália lê o código na conversa e sabe
