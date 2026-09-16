@@ -25,6 +25,7 @@ export interface Midia {
 
 export const MIDIA: Midia[] = [
   {
+    // ✅ Autorização de uso confirmada pelo Júlio em 16/09/2026.
     id:           'argumento-natalia-2026',
     youtubeId:    'ug7T97FkbIc',
     titulo:       'Mauro Bonna entrevista a fisioterapeuta Natália Silva',
