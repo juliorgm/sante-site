@@ -33,7 +33,7 @@ export const POSTS: Post[] = [
   {
     slug:      'pilates-para-dor-lombar',
     titulo:    '5 benefícios do Pilates para quem tem dor lombar',
-    resumo:    'A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clínico pode ser um aliado poderoso — veja como.',
+    resumo:    'A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clássico conduzido por fisioterapeuta pode ser um aliado poderoso — veja como.',
     data:      '2023-12-20',
     categoria: 'Pilates',
   },

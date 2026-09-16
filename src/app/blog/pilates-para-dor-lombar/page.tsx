@@ -4,7 +4,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 
 export const metadata = {
   title: '5 benefícios do Pilates para quem tem dor lombar | Santé',
-  description: 'A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clínico pode ser um aliado poderoso — veja como.',
+  description: 'A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clássico conduzido por fisioterapeuta pode ser um aliado poderoso — veja como.',
 }
 
 export default function Artigo3() {
@@ -12,7 +12,7 @@ export default function Artigo3() {
     <div className="pt-24">
       <BlogPostSchema
         titulo="5 benefícios do Pilates para quem tem dor lombar"
-        resumo="A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clínico pode ser um aliado poderoso — veja como."
+        resumo="A dor lombar é a queixa mais comum em consultórios de fisioterapia. O Pilates Clássico conduzido por fisioterapeuta pode ser um aliado poderoso — veja como."
         data="2023-12-20"
         slug="pilates-para-dor-lombar"
       />
@@ -36,18 +36,21 @@ export default function Artigo3() {
             <p>
               A dor lombar é a queixa mais comum em consultórios de fisioterapia no Brasil e no mundo.
               Estima-se que 80% das pessoas terão pelo menos um episódio significativo de dor na região
-              lombar ao longo da vida. E o Pilates Clínico — conduzido por fisioterapeutas — tem se
+              lombar ao longo da vida. E o Pilates Clássico — conduzido por fisioterapeutas — tem se
               mostrado um dos recursos mais eficazes tanto para o tratamento quanto para a prevenção.
             </p>
 
             <h2 className="font-serif text-2xl text-navy mt-8">
-              Por que o Pilates Clínico é diferente do Pilates de academia
+              Por que o Pilates Clássico com fisioterapeuta é diferente do Pilates de academia
             </h2>
             <p>
-              Antes de falar nos benefícios, é importante fazer essa distinção. O Pilates Clínico é
-              conduzido por fisioterapeutas com formação específica, que adaptam os exercícios para
-              a condição de cada paciente. Não é uma aula genérica — é um recurso terapêutico com
-              indicação e progressão individualizadas.
+              Antes de falar nos benefícios, é importante fazer essa distinção — e ela tem duas
+              partes. A primeira é o método: o Pilates Clássico segue a ordem e os princípios
+              originais de Joseph Pilates e usa todos os aparelhos tradicionais — Reformer,
+              Cadillac, Chair, Barrel e Mat. A segunda é quem conduz: com um fisioterapeuta, esse
+              repertório é aplicado a partir de uma avaliação, com indicação e progressão pensadas
+              para a sua condição. Não é uma aula genérica em turma grande — é um recurso
+              terapêutico individualizado.
             </p>
 
             <h2 className="font-serif text-2xl text-navy mt-8">Os 5 principais benefícios</h2>
@@ -92,7 +95,7 @@ export default function Artigo3() {
 
             <h2 className="font-serif text-2xl text-navy mt-8">Para quem é indicado</h2>
             <p>
-              O Pilates Clínico é indicado para praticamente qualquer pessoa com dor lombar —
+              O Pilates Clássico é indicado para praticamente qualquer pessoa com dor lombar —
               desde episódios agudos em fase de recuperação até dores crônicas de longa data.
               A chave está na avaliação prévia e na individualização dos exercícios.
             </p>
