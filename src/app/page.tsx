@@ -4,6 +4,8 @@ import { CLINICA, whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
 import { SERVICOS } from '@/data/services'
 import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 import { EQUIPE } from '@/data/team'
+import { MIDIA } from '@/data/midia'
+import VideoFacade from '@/components/VideoFacade'
 
 // ── SEÇÃO HERO ─────────────────────────────────────────────────
 function Hero() {
@@ -198,6 +200,62 @@ function Depoimentos() {
   )
 }
 
+// ── SEÇÃO SANTÉ NA MÍDIA ───────────────────────────────────────
+// Autoridade de terceiros: a validação vem de fora, não da própria
+// clínica. Por isso fica DEPOIS dos depoimentos e ANTES da equipe —
+// fecha o bloco de prova social e abre o de credenciais.
+function Midia() {
+  const destaque = MIDIA.find((m) => m.destaque)
+  if (!destaque) return null
+
+  const capa =
+    'https://img.youtube.com/vi/' + destaque.youtubeId + '/maxresdefault.jpg'
+
+  // Rich snippet de vídeo. Só emitimos o schema se publicadoEm estiver
+  // preenchido: o Google exige uploadDate, e data inventada é pior que
+  // schema ausente. Ver TODO-DATA em src/data/midia.ts.
+  const schema = destaque.publicadoEm
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: destaque.titulo,
+        description: destaque.resumo,
+        thumbnailUrl: capa,
+        uploadDate: destaque.publicadoEm,
+        duration: destaque.duracaoISO,
+        embedUrl:
+          'https://www.youtube-nocookie.com/embed/' + destaque.youtubeId,
+      }
+    : null
+
+  return (
+    <section className="section bg-navy">
+      <div className="max-w-4xl mx-auto">
+        {schema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        )}
+
+        <div className="mb-10 text-center">
+          <span className="inline-block bg-gold/15 text-gold text-xs font-medium px-3 py-1 rounded-full mb-3">
+            Santé na mídia
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">
+            {destaque.participante} no {destaque.veiculo}
+          </h2>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+            {destaque.resumo}
+          </p>
+        </div>
+
+        <VideoFacade item={destaque} />
+      </div>
+    </section>
+  )
+}
+
 // ── SEÇÃO EQUIPE ───────────────────────────────────────────────
 function Equipe() {
   const destaques = EQUIPE.filter((p) => p.destaque)
@@ -292,6 +350,7 @@ export default function HomePage() {
       <Diferencial />
       <Servicos />
       <Depoimentos />
+      <Midia />
       <Equipe />
       <CTAFinal />
     </>
