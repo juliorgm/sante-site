@@ -1,4 +1,28 @@
+# Dependências e build
 node_modules/
 .next/
+out/
+build/
+
+# Ambiente
 .env
 .env.local
+.env*.local
+
+# Deploy
+.vercel
+
+# Editores
+.idea/
+.vscode/
+*.swp
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# TypeScript / logs
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+*.log
+npm-debug.log*
