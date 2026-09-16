@@ -48,6 +48,15 @@ vai acabar decidindo por opinião. É desperdiçar o trabalho duas vezes.
 
 ## Onda 0 — Correções imediatas
 
+**Status em 2026-09-16: 0.2 e 0.3 concluídas. 0.1 e 0.4 seguem abertas.**
+
+| Item | Status |
+|---|---|
+| 0.1 CREFITO duplicado | 🟡 parcial — Camila corrigida; **falta o número da Liane** (TODO-CREFITO em `team.ts`) |
+| 0.2 Horários | ✅ feito — `a10ed06` |
+| 0.3 "Pilates Clássico" | ✅ feito — `3ab2c68` |
+| 0.4 Depoimento do Mauro Bonna | 🔴 aberto — depende de retranscrever do áudio/vídeo original |
+
 Quatro correções pequenas, alto risco evitado, nenhuma delas exige spec.
 
 **0.1 — Corrigir o CREFITO duplicado (LEG-1).** Pedir à Natália os dois números corretos
