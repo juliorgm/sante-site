@@ -256,6 +256,35 @@ serviço local.
 
 ---
 
+## 4.7 A planilha de atendimento
+
+Criada em 2026-09-16 e entregue ao Júlio como `.xlsx` para subir no Google Sheets. Três
+abas: **Atendimentos** (o log), **Resumo** (métricas por período) e **Como usar**.
+
+O princípio do desenho: a recepção nunca digita o que a máquina já sabe. Duas colunas se
+preenchem sozinhas — `Fonte`, extraída do código de origem, e `Nível`, extraído da etapa —
+e existem justamente para que as fórmulas do Resumo funcionem sem trabalho manual.
+
+A coluna que justifica a planilha inteira é a **Etapa**, com seis valores ordenados: novo
+contato, respondido, agendou avaliação, compareceu, paciente recorrente, não avançou. O
+GA4 sabe tudo até o clique; o que acontece depois só existe aqui. A etapa é o estado atual
+da conversa, não um histórico — atualiza-se a mesma linha.
+
+O Resumo pede três entradas (data inicial, data final, investimento em anúncios no
+período) e devolve conversas por fonte, taxa de agendamento, taxa de comparecimento e —
+o número que decide orçamento — **custo por avaliação e por paciente recorrente vindos de
+anúncio**.
+
+Duas regras registradas dentro da própria planilha: nenhum dado clínico entra ali (queixa,
+diagnóstico, histórico são dado sensível sob a LGPD e têm regra própria), e o total nunca
+vai bater com o GA4 — lá conta clique, aqui conta conversa. A diferença entre os dois é a
+taxa de clique-para-mensagem, que hoje ninguém conhece.
+
+Automatizar a escrita dessa linha no clique é possível (Apps Script + `sendBeacon`), mas
+depende de tornar o código de origem único por clique, senão a recepção não consegue casar
+conversa com linha. Fica para depois: **o hábito de preencher é o ativo; a automação só
+torna o hábito mais fácil depois que ele existe.**
+
 ## 5. Painel de decisão
 
 O objetivo é que a decisão de verba leve dez minutos, não uma tarde. Looker Studio
