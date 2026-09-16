@@ -81,12 +81,12 @@ function Hero() {
               Primeira consulta — avaliação completa
             </p>
             <WhatsAppLink
-              mensagem={WHATSAPP_MENSAGENS.agendamento}
+              mensagem={WHATSAPP_MENSAGENS.funcionamento}
               secao="hero_card"
-              assunto="agendamento"
+              assunto="funcionamento"
               className="btn-primary text-xs w-full justify-center"
             >
-              Agendar agora
+              Como funciona a avaliação
             </WhatsAppLink>
           </div>
         </div>

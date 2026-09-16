@@ -46,7 +46,7 @@ export default function EspecialidadesPage() {
                   assunto={servico.id}
                   className="btn-primary text-center text-sm"
                 >
-                  Agendar
+                  Tirar dúvidas
                 </WhatsAppLink>
               </div>
             </div>

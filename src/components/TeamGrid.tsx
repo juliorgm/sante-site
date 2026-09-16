@@ -170,12 +170,12 @@ function PerfilDialog({ prof, onClose }: { prof: Profissional; onClose: () => vo
           )}
 
           <WhatsAppLink
-            mensagem={WHATSAPP_MENSAGENS.agendamento}
+            mensagem={WHATSAPP_MENSAGENS.funcionamento}
             secao="perfil_equipe"
             assunto={prof.id}
             className="btn-primary w-full justify-center"
           >
-            Agendar avaliação
+            Falar com a gente
           </WhatsAppLink>
         </div>
       </div>

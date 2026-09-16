@@ -271,7 +271,33 @@ sustenta a qualidade independentemente de quem atende, e amplificar depoimentos 
 mais de um profissional. O depoimento da Ana Clara já faz exatamente isso ao mencionar
 Natália e Liane na mesma história; é o padrão a multiplicar, não uma coincidência feliz.
 
-### Preço
+### Avaliação inicial paga — R$ 200
+
+**Registrado em 16/09/2026. ⚠️ Valor NUNCA vai para canal digital** (constituição,
+princípio 10). Fica aqui porque explica um atrito real e uma oportunidade.
+
+A primeira consulta é uma avaliação paga de R$ 200. Nas palavras do Júlio: "tem cliente
+que chora, mas é o grande diferencial da Santé".
+
+As duas metades dessa frase não estão em contradição — elas descrevem um **problema de
+sequência, não de preço**. Hoje o site convida a "agendar", a pessoa chega ao WhatsApp
+esperando marcar horário, e o que recebe é um valor. O preço aparece antes da razão dele
+existir, e nesse momento ele é só uma barreira.
+
+Se a pessoa chegar sabendo o que é aquela consulta — até 60 minutos, anamnese completa,
+testes funcionais, fotografia postural e um plano individualizado, conduzida por
+fisioterapeuta com registro — os R$ 200 deixam de ser surpresa e passam a ser a prova do
+posicionamento premium. É o mesmo valor com outro significado.
+
+Daí a mudança de CTA de 16/09: o site parou de convidar a agendar e passou a convidar a
+entender. A regra de não divulgar preço continua valendo; o que muda é **pré-vender o
+valor** antes de a recepção falar o número.
+
+Trabalho decorrente, ainda não feito: uma seção ou página "Como é a primeira consulta",
+detalhando o que acontece naquela hora. É a peça que falta para a conversa do WhatsApp
+começar já qualificada. Precisa de validação clínica da Natália.
+
+### Reajuste
 
 Sem reajuste há dois anos. O reajuste é decisão da Natália e virá junto com a
 reorganização do negócio e com a metodologia própria — a lógica declarada é entregar mais
