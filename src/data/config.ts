@@ -83,7 +83,9 @@ export const WHATSAPP_MENSAGENS = {
   geral:         'Olá! Gostaria de saber mais sobre os serviços da Santé.',
   agendamento:   'Olá! Gostaria de agendar uma avaliação na Santé.',
   funcionamento: 'Olá! Gostaria de saber como funciona o atendimento na Santé.',
+  fisioterapia:  'Olá! Gostaria de saber mais sobre os atendimentos de fisioterapia da Santé.',
   pilates:       'Olá! Gostaria de saber mais sobre as aulas de Pilates da Santé.',
+  domiciliar:    'Olá! Gostaria de saber sobre o atendimento domiciliar da Santé.',
   // ⏸️ Desativada em 16/09/2026 a pedido do Júlio ("por hora").
   //    A mensagem fica aqui para o botão voltar sem reescrever nada:
   //    basta repor a opção em WhatsAppButton.tsx e contato/page.tsx

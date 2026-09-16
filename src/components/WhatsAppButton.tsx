@@ -19,10 +19,11 @@ export default function WhatsAppButton() {
   // "assunto" é o que aparece na medição — mantenha estável mesmo que
   // o rótulo visível mude, senão o histórico do GA4 quebra.
   const opcoes = [
-    { label: 'Agendar avaliação',         assunto: 'agendamento',   msg: WHATSAPP_MENSAGENS.agendamento },
-    { label: 'Como funciona?',            assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
-    { label: 'Informações sobre Pilates', assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
-    { label: 'Como chegar',               assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
+    { label: 'Como funciona?',                 assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
+    { label: 'Informações sobre fisioterapia', assunto: 'fisioterapia',  msg: WHATSAPP_MENSAGENS.fisioterapia },
+    { label: 'Informações sobre Pilates',      assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
+    { label: 'Atendimento domiciliar',         assunto: 'domiciliar',    msg: WHATSAPP_MENSAGENS.domiciliar },
+    { label: 'Como chegar',                    assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
   ]
 
   return (

@@ -35,10 +35,11 @@ export default function ContatoPage() {
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  { label: 'Agendar avaliação',           assunto: 'agendamento',   msg: WHATSAPP_MENSAGENS.agendamento },
-                  { label: 'Como funciona o atendimento',  assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
-                  { label: 'Informações sobre Pilates',    assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
-                  { label: 'Como chegar à clínica',        assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
+                  { label: 'Como funciona o atendimento',    assunto: 'funcionamento', msg: WHATSAPP_MENSAGENS.funcionamento },
+                  { label: 'Informações sobre fisioterapia', assunto: 'fisioterapia',  msg: WHATSAPP_MENSAGENS.fisioterapia },
+                  { label: 'Informações sobre Pilates',      assunto: 'pilates',       msg: WHATSAPP_MENSAGENS.pilates },
+                  { label: 'Atendimento domiciliar',         assunto: 'domiciliar',    msg: WHATSAPP_MENSAGENS.domiciliar },
+                  { label: 'Como chegar à clínica',          assunto: 'localizacao',   msg: WHATSAPP_MENSAGENS.localizacao },
                 ].map((item) => (
                   <WhatsAppLink
                     key={item.label}
