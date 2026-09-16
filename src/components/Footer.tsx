@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CLINICA, REDES_SOCIAIS, whatsappLink, WHATSAPP_MENSAGENS } from '@/data/config'
+import { CLINICA, REDES_SOCIAIS, whatsappLink, WHATSAPP_MENSAGENS, formatarTurnos } from '@/data/config'
 
 export default function Footer() {
   return (
@@ -62,7 +62,9 @@ export default function Footer() {
           <div className="flex flex-col gap-3 text-sm text-white/60">
             <p>{CLINICA.endereco}</p>
             {CLINICA.horarios.map((h) => (
-              <p key={h.dia}><span className="text-white">{h.dia}:</span> {h.hora}</p>
+              <p key={h.label}>
+                <span className="text-white">{h.label}:</span> {formatarTurnos(h.turnos)}
+              </p>
             ))}
             <a
               href={whatsappLink(WHATSAPP_MENSAGENS.geral)}

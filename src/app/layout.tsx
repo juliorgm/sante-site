@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { SEO, CLINICA } from '@/data/config'
+import { SEO, CLINICA, WHATSAPP_NUMERO } from '@/data/config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
@@ -35,7 +35,7 @@ function SchemaMarkup() {
     name: `${CLINICA.nome} — ${CLINICA.subtitulo}`,
     description: CLINICA.descricao,
     url: SEO.url,
-    telephone: '+5591980609411',
+    telephone: '+' + WHATSAPP_NUMERO,
     address: {
       '@type': 'PostalAddress',
       streetAddress: CLINICA.endereco,
@@ -43,20 +43,17 @@ function SchemaMarkup() {
       addressRegion: 'PA',
       addressCountry: 'BR',
     },
-    openingHoursSpecification: [
-      {
+    // ⚠️ GERADO a partir de CLINICA.horarios — não redeclare aqui.
+    // Um bloco por TURNO. Declarar um único bloco 06:30–20:30 faz o
+    // Google exibir a clínica como aberta no almoço, todos os dias.
+    openingHoursSpecification: CLINICA.horarios.flatMap((h) =>
+      h.turnos.map((t) => ({
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday'],
-        opens: '06:30',
-        closes: '20:30',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Friday'],
-        opens: '06:30',
-        closes: '12:30',
-      },
-    ],
+        dayOfWeek: h.diasSchema,
+        opens: t.abre,
+        closes: t.fecha,
+      }))
+    ),
     medicalSpecialty: 'PhysicalTherapy',
   }
 

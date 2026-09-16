@@ -4,6 +4,23 @@
 // em nenhum outro arquivo.
 // ================================================================
 
+// ── Tipos de horário ─────────────────────────────────────────────
+export interface Turno {
+  abre:  string   // 'HH:MM'
+  fecha: string   // 'HH:MM'
+}
+
+export interface HorarioDia {
+  label:      string    // como aparece no site
+  diasSchema: string[]  // nomes em inglês, para o schema.org
+  turnos:     Turno[]   // um ou mais turnos no mesmo dia
+}
+
+/** 'Segunda a quinta' -> '06:30 às 12:30 e 14:30 às 20:30' */
+export function formatarTurnos(turnos: Turno[]): string {
+  return turnos.map((t) => t.abre + ' às ' + t.fecha).join(' e ')
+}
+
 export const CLINICA = {
   nome:     'Santé',
   subtitulo: 'Fisioterapia e Pilates em Belém',
@@ -14,11 +31,37 @@ export const CLINICA = {
   endereco:  'Ed. Urbe Office - Av. Serzedelo Corrêa, 805 - loja 06 - térreo - Batista Campos, Belém - PA, 66033-770',
   // ↑ Troque pelo endereço real
 
-  // Horários de atendimento
+  // ── Horários de atendimento ──────────────────────────────────
+  // ⚠️ FONTE DA VERDADE. Confirmado pelo Júlio em 16/09/2026.
+  //    O JSON-LD em layout.tsx é GERADO a partir daqui. Nunca
+  //    redeclare horário em outro arquivo — foi assim que o site
+  //    passou a anunciar a clínica aberta no horário de almoço.
+  //    Cada turno vira um bloco separado no schema.
+  //
+  // ⚠️ SÁBADO: a clínica não atende. Se isso mudar, acrescente um
+  //    bloco aqui e o site e o Google se atualizam sozinhos.
   horarios: [
-    { dia: 'Segunda a Sexta', hora: '06:30h às 20:30h' },
-    { dia: 'Sábado',          hora: '08h às 12h' },
-  ],
+    {
+      label: 'Segunda a quinta',
+      diasSchema: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+      turnos: [
+        { abre: '06:30', fecha: '12:30' },
+        { abre: '14:30', fecha: '20:30' },
+      ],
+    },
+    {
+      label: 'Sexta',
+      diasSchema: ['Friday'],
+      turnos: [{ abre: '06:30', fecha: '12:30' }],
+    },
+  ] as HorarioDia[],
+
+  /** A agenda encerra antes do fechamento — regra de agendamento. */
+  ultimoAtendimento: '19:30',
+
+  /** O que acontece no intervalo entre os turnos. */
+  avisoIntervalo:
+    'Entre 12:30 e 14:30 recebemos mensagens no WhatsApp e respondemos a partir das 14:30.',
 
   email: 'administracao@santefisioterapia.com.br',
 }
@@ -27,7 +70,7 @@ export const CLINICA = {
 // 📱 WHATSAPP — número e mensagens pré-preenchidas por botão
 // ================================================================
 // Formato do número: código do país + DDD + número (sem + ou espaços)
-const WHATSAPP_NUMERO = '5591980609411'
+export const WHATSAPP_NUMERO = '5591980609411'
 
 // Função que gera o link do WhatsApp com a mensagem escolhida
 export function whatsappLink(mensagem: string): string {

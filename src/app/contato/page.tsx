@@ -1,4 +1,4 @@
-import { CLINICA, whatsappLink, WHATSAPP_MENSAGENS, REDES_SOCIAIS } from '@/data/config'
+import { CLINICA, whatsappLink, WHATSAPP_MENSAGENS, REDES_SOCIAIS, formatarTurnos } from '@/data/config'
 
 export const metadata = {
   title: 'Contato | Santé — Fisioterapia em Belém',
@@ -69,10 +69,17 @@ export default function ContatoPage() {
               <div>
                 <h3 className="font-serif text-lg text-navy mb-2">Horários</h3>
                 {CLINICA.horarios.map((h) => (
-                  <div key={h.dia} className="text-sm text-gray-500 mb-1">
-                    <span className="text-navy font-medium">{h.dia}:</span> {h.hora}
+                  <div key={h.label} className="text-sm text-gray-500 mb-1">
+                    <span className="text-navy font-medium">{h.label}:</span>{' '}
+                    {formatarTurnos(h.turnos)}
                   </div>
                 ))}
+                <p className="text-xs text-gray-400 mt-3 leading-relaxed">
+                  Último atendimento inicia às {CLINICA.ultimoAtendimento}.
+                </p>
+                <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+                  {CLINICA.avisoIntervalo}
+                </p>
               </div>
             </div>
 
