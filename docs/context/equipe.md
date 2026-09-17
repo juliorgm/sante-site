@@ -75,11 +75,16 @@ consistência do método dentro da casa.
 
 ## Pendências — bloqueiam a publicação
 
-**1. CREFITO da Liane.** É o item mais urgente de todo o projeto. O site publica hoje
-`CREFITO-8 / 168221-F` tanto para a Liane quanto para a Camila — o mesmo número para duas
-profissionais, o que é impossível. O currículo da Camila agora informa `395039.1.F`, o que
-sugere que o `168221-F` pertence à Liane. **Sugerir não é confirmar.** Pode ter havido
-cópia de bloco na direção contrária. Precisa vir da Liane.
+**1. ~~CREFITO da Liane~~ — RESOLVIDO em 17/09/2026.** Confirmado pelo Júlio: o número é
+`168221-F`, e era o dela desde sempre. A duplicação vinha do lado da Camila, cujo registro
+real (`395039.1.F`) só apareceu no currículo de 16/09.
+
+Vale registrar o que esse caso ensinou: por eliminação, o `168221-F` "obviamente" era da
+Liane — e essa dedução, embora certa, não podia ser aplicada. Se estivesse errada, o site
+teria publicado um registro profissional falso por mais uma semana. O custo de perguntar
+foi um dia; o de errar seria de outra ordem.
+
+⚠️ Confirmou-se o **número**, não a **região**. O item 3 abaixo segue aberto.
 
 **2. CREFITO da Natália.** Não veio no currículo. O site exibe `CREFITO-8 / 100885-F`.
 Confirmar.

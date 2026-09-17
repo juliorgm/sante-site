@@ -12,7 +12,6 @@ aplique no código.
 
 | # | O quê | Com quem | Onde aplica |
 |---|---|---|---|
-| P1 | **CREFITO da Liane Melo.** O site publica `CREFITO-8 / 168221-F`, que era duplicado com o da Camila. O currículo da Camila esclareceu que o dela é `395039.1.F`, mas isso **sugere** e não confirma que o outro é da Liane. | Liane | `src/data/team.ts` → `TODO-CREFITO` |
 | P2 | **CREFITO da Natália.** Não veio no currículo. O site exibe `CREFITO-8 / 100885-F`. | Natália | `src/data/team.ts` |
 | P3 | **Região do CREFITO.** A Juliana consta como CREFITO-12, que é a região que abrange o Pará; Natália e Liane constam como CREFITO-8. Para quem atua em Belém o esperado seria 12 nas quatro. Pode ser um segundo erro publicado. | Consulta ao registro | `src/data/team.ts` |
 | P4 | **Grafia oficial do número da Camila.** `395039.1.F` não segue o padrão dos demais. | Camila | `src/data/team.ts` |
@@ -68,6 +67,9 @@ começa sem estas respostas.
 - ~~"Pilates Clínico" no blog~~ — corrigido (`3ab2c68`)
 - ~~CREFITO da Camila~~ — informado no currículo de 16/09
 - ~~Sobrenome da Liane~~ — Melo, aplicado
+- ~~**P1 — CREFITO da Liane**~~ — confirmado pelo Júlio em 17/09/2026 como
+  `168221-F`. O número que já estava publicado era o dela; a duplicação vinha do lado da
+  Camila. ⚠️ Confirmou-se o NÚMERO, não a região: P3 (CREFITO-8 x CREFITO-12) segue aberta.
 - ~~Registrar as dimensões personalizadas no GA4~~ — **as cinco criadas em 16/09/2026** na
   propriedade `p534828718`, escopo Evento (`secao`, `assunto`, `origem`, `fonte`,
   `campanha`). A coleta começa nesta data; não há retroatividade.

@@ -6,7 +6,7 @@
 //     errado publicado é infração ética perante o CREFITO.
 //     Fonte da verdade dos currículos: docs/context/equipe.md
 //
-// ⚠️  PENDÊNCIA ABERTA: o CREFITO da Liane NÃO está confirmado.
+// ⚠️  PENDÊNCIA ABERTA: o CREFITO da Natália ainda NÃO foi confirmado.
 //     Procure por "TODO-CREFITO" abaixo.
 //
 // ADICIONAR: copie um bloco { ... } e cole antes do fechamento ]
@@ -84,19 +84,10 @@ export const EQUIPE: Profissional[] = [
     titulo:    'Fisioterapeuta',
     categoria: 'fisioterapeuta',
 
-    // ────────────────────────────────────────────────────────────
-    // 🚨 TODO-CREFITO — JÚLIO, TROCAR MANUALMENTE
-    //
-    // O número abaixo é o que já estava publicado no site, mas ele
-    // aparecia DUPLICADO com o da Camila. O currículo de 16/09
-    // esclareceu que o registro da Camila é 395039.1.F, o que sugere
-    // — mas NÃO confirma — que 168221-F pertence à Liane.
-    //
-    // Não deduza. Peça o número à Liane, substitua a linha abaixo e
-    // troque crefitoConfirmado para true.
-    // ────────────────────────────────────────────────────────────
+    // ✅ Número confirmado pelo Júlio em 17/09/2026: era da Liane mesmo.
+    //    A duplicação vinha do lado da Camila, corrigida em 16/09.
     crefito:   'CREFITO-8 / 168221-F',
-    crefitoConfirmado: false,
+    crefitoConfirmado: true,
 
     especializacoes: [
       'Pilates Clássico — Nível 3',
@@ -193,7 +184,6 @@ export const EQUIPE: Profissional[] = [
 // 📋 PENDÊNCIAS ABERTAS — não publique nada daqui como resolvido
 // ================================================================
 export const PENDENCIAS_EQUIPE = [
-  'CREFITO da Liane Melo — número no site NÃO confirmado (TODO-CREFITO)',
   'CREFITO da Natália Silva — não veio no currículo de 16/09',
   'Região do CREFITO — Juliana é CREFITO-12 (abrange o Pará); Natália e Liane constam como CREFITO-8. Conferir.',
   'Grafia oficial do número da Camila (395039.1.F) — formato divergente dos demais',
